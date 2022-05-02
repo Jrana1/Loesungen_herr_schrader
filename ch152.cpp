@@ -11,11 +11,11 @@ void print_menu(char (*ptr)[10])
         cout << i + 1 << "\t:" << ptr[i] << endl;
     }
 }
-void print_kalender(int n, int *monate_unterschie, char (*ptr)[10], int *monate_ende)
+void print_kalender(int n, int *monate_unterschiede, char (*ptr)[10], int *monate_ende)
 {
     cout << "\t\t\t**" << ptr[n - 1] << " 2022**\n\tMo\tDi\tMi\tDo\tFr\tSa\tSo\n";
     int count = 0, j = 1;
-    for (int i = 0; i < (monate_ende[n - 1] + monate_unterschie[n - 1]); i++)
+    for (int i = 0; i < (monate_ende[n - 1] + monate_unterschiede[n - 1]); i++)
     {
 
         if (count == 7)
@@ -27,7 +27,7 @@ void print_kalender(int n, int *monate_unterschie, char (*ptr)[10], int *monate_
         {
             cout << "\t";
         }
-        if (i < monate_unterschie[n - 1])
+        if (i < monate_unterschiede[n - 1])
         {
             cout << "\t";
             count++;
